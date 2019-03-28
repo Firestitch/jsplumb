@@ -1,5 +1,5 @@
 {
-  "name": "jsplumb",
+  "name": "@firestitch/jsplumb",
   "version": "2.9.1",
   "description": "Visual connectivity for webapps",
   "main": "dist/js/jsplumb.js",
