@@ -4068,12 +4068,12 @@
             return _container;
         };
 
-        this.bind = function (event, fn) {
+        this.bind = function (event, fn, insertAtStart) {
             if ("ready" === event && initialized) {
                 fn();
             }
             else {
-                _bb.apply(_currentInstance, [event, fn]);
+                _bb.apply(_currentInstance, [event, fn, insertAtStart]);
             }
         };
 
