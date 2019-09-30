@@ -1,3 +1,78 @@
+## 2.12.0
+
+September 23rd 2019
+
+- added support for label location being specified in the `data` for some Connection, via key `labelLocation`
+- added support for overridding `labelLocation` key name with user-specified key, via `labelLocationAttribute` in Label overlay options.
+
+## 2.11.2
+
+August 7th 2019
+
+- added `snapToGrid()` method to jsPlumb instance.
+- added `replaceEndpoint()` method to Connection.
+
+## 2.11.1
+
+July 18th 2019
+
+- fixed issue in reset method introduced in 2.11.0
+
+## 2.11.0
+
+July 17th 2019
+
+- updated util from Toolkit edition
+
+- Changes to the way types are overridden/merged (not all backwards compatible):
+
+    - By default, every key in a type overrides previous types, with the exception of `cssClass`, `events` and `overlays`. Previously, only
+    `connector` would override other types.  This meant that if you used any of the array variants to specify `anchor`,  the arrays 
+    would be merged and the result would be nonsense.  It also meant that `paintStyle` and its variants would be merged at a 
+    fine-grained level: you could specify `strokeWidth` in a parent and then `stroke` in a child. That is no longer possible.
+    
+    - You can set `mergeStrategy:"override"` in a type now to indicate to jsPlumb that it should overwrite parent definitions of
+    `events` and `overlays` rather than merge them with the child's values for them.
+    
+    - `cssClass` is still "collated" by default, ie. in a normal merge both child `cssClass` and parent `cssClass` values are
+    retained. If you specify `mergeStrategy:"override"` then `cssClass` is strictly overridden and is not collated.
+
+
+## 2.10.2
+
+July 4th 2019
+
+- Upgraded to Katavorio 1.4.8
+
+## 2.10.1
+
+June 25th 2019
+
+- refactored how makeSource gets its source parameters, so that call sites can manipulate the parameters after the makeSource call.
+- PR 843: reapplyTypes() for Arrow overlays ignores 'direction' parameter
+- fixed an issue causing connectors to disappear when a type is applied multiple times.
+
+
+## 2.10.0
+
+June 5th 2019
+
+- fix `rectangle` and `square` Perimeter anchors so that their orientation is correct for each face.
+- add support for scrollable lists, plus a demonstration page
+
+## 2.9.3
+
+May 9th 2019
+
+- Upgrade to Katavorio 1.4.5
+- support "scoped root" selectors in delegated draggables
+
+## 2.9.2
+
+April 22nd 2019
+
+- upgrade Katavorio to 1.4.2
+
 ## 2.9.1
 
 March 7th 2019

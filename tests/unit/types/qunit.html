@@ -5,6 +5,12 @@
     <script src="../bind-shim.js"></script>
     <script src="../qunit-1.11.0.js"></script>
 
+    <style>
+        .jtk-group-expanded {
+            outline:1px solid #ccc;
+        }
+    </style>
+
     <!-- JS -->
     <script src="../../../dist/js/jsplumb.js"></script>
     <!-- /JS -->
@@ -23,7 +29,7 @@
 <ol id="qunit-tests"></ol>
 
 <script type="text/javascript">
-    jsPlumb.ready(testSuite.bind(testSuite, jsPlumb.getInstance()));
+    jsPlumb.ready(testSuite);
 </script>
 </body>
 </html>
